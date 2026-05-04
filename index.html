@@ -189,7 +189,7 @@
             </div>
             <div class="card">
                 <h3>M.A.T.E. Structural Gates</h3>
-                <p>Advanced Momentum, Area of Value, and Exhaustion filters ensure that only the highest-conviction entries are executed.</p>
+                <p>Advanced Momentum, Area of Value, Timing, and Exhaustion filters ensure that only the highest-conviction entries are executed.</p>
             </div>
             <div class="card">
                 <h3>Black Swan Resilience</h3>
@@ -202,17 +202,22 @@
         <h2>Secure Investor Onboarding</h2>
         <p style="color: var(--text-muted); margin-bottom: 2rem;">Please complete the encrypted form below to initiate your institutional connection.</p>
         
-        <div style="background-color: var(--slate); padding: 1rem; border-radius: 10px; border: 1px solid var(--gold-glow); box-shadow: 0 0 20px rgba(212,175,55,0.1);">
-            <iframe data-tally-src="https://tally.so/embed/w7L9PB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
-                    loading="lazy" 
-                    width="100%" 
-                    height="500" 
-                    frameborder="0" 
-                    marginheight="0" 
-                    marginwidth="0" 
-                    title="Investor Onboarding">
-            </iframe>
-            <script async src="https://tally.so/widgets/embed.js"></script>
+        <div style="background-color: var(--slate); padding: 3rem; border-radius: 10px; border: 1px solid var(--gold-glow); box-shadow: 0 0 20px rgba(212,175,55,0.1); max-width: 600px; margin: 0 auto;">
+            <form style="display: flex; flex-direction: column; gap: 1.5rem; text-align: left;" onsubmit="event.preventDefault(); window.location.href = 'mailto:your_secure_email@proton.me?subject=Institutional Onboarding Request&body=Name: ' + encodeURIComponent(document.getElementById('investor_name').value) + '%0AEmail: ' + encodeURIComponent(document.getElementById('investor_email').value) + '%0AMT5 ID: ' + encodeURIComponent(document.getElementById('investor_mt5').value);">
+                <div>
+                    <label for="investor_name" style="color: var(--gold); display: block; margin-bottom: 0.5rem; font-weight: bold; letter-spacing: 1px;">Full Name / Entity</label>
+                    <input type="text" id="investor_name" required placeholder="e.g., Aureus Capital" style="width: 100%; padding: 1rem; border-radius: 5px; border: 1px solid #333; background-color: #0A0A0A; color: var(--text-light); font-family: 'Outfit', sans-serif; outline: none;">
+                </div>
+                <div>
+                    <label for="investor_email" style="color: var(--gold); display: block; margin-bottom: 0.5rem; font-weight: bold; letter-spacing: 1px;">Secure Email Address</label>
+                    <input type="email" id="investor_email" required placeholder="e.g., investor@proton.me" style="width: 100%; padding: 1rem; border-radius: 5px; border: 1px solid #333; background-color: #0A0A0A; color: var(--text-light); font-family: 'Outfit', sans-serif; outline: none;">
+                </div>
+                <div>
+                    <label for="investor_mt5" style="color: var(--gold); display: block; margin-bottom: 0.5rem; font-weight: bold; letter-spacing: 1px;">XM MT5 Account ID (No Password Required)</label>
+                    <input type="text" id="investor_mt5" required placeholder="e.g., 101534930" style="width: 100%; padding: 1rem; border-radius: 5px; border: 1px solid #333; background-color: #0A0A0A; color: var(--text-light); font-family: 'Outfit', sans-serif; outline: none;">
+                </div>
+                <button type="submit" class="cta-button" style="border: none; cursor: pointer; font-family: 'Outfit', sans-serif; font-size: 1.1rem; margin-top: 1rem; width: 100%;">Submit Encrypted Application</button>
+            </form>
         </div>
     </section>
 
